@@ -10,6 +10,7 @@ function updateClock() {
   let ampm = hours >= 12 ? "PM" : "AM";
   // if hours % 12 is 0, keep hours, else set it to 12
   hours = hours % 12 ? hours : 12;
+  hours = hours > 12 ? hours - 12 : hours;
   // if minuntes is < 10 add a 0 in front else keep minutes
   minutes = minutes < 10 ? "0" + minutes : minutes;
 
